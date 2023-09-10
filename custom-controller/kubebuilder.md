@@ -223,8 +223,8 @@ config/manager/manager.yaml の imagePullPolicy を IfNotPresent に設定しま
 開発時もコントローラーの実装が変わった場合は、以下のコマンドを実行します
 
 ```
-$ sudo make docker-build
-$ sudo kind load docker-image controller:latest
+$ make docker-build
+$ kind load docker-image controller:latest
 ```
 
 以下のコマンドで、CRD を Kubernetes クラスターに適用します。  
@@ -232,13 +232,13 @@ $ sudo kind load docker-image controller:latest
 ただし、互換性のない変更をおこなった場合はこのコマンドに失敗するため、事前に make uninstall を実行してください。
 
 ```
-$ sudo make install
+$ make install
 ```
 
 CRD 以外のマニフェストファイルに変更がある場合は下記のコマンドを実行します。ただし、互換性のない変更をおこなった場合はこのコマンドに失敗するため、事前に make undeploy を実行してください。
 
 ```
-$ sudo make deploy
+$ make deploy
 ```
 
 次のコマンドでカスタムコントローラーを再起動します。

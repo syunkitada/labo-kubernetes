@@ -1,0 +1,18 @@
+---
+# aqua - Declarative CLI Version Manager
+# https://aquaproj.github.io/
+# checksum:
+#   enabled: true
+#   require_checksum: true
+#   supported_envs:
+#   - all
+registries:
+- type: standard
+  ref: v4.47.0 # renovate: depName=aquaproj/aqua-registry
+packages:
+- name: tilt-dev/tilt@v0.33.5
+- name: tilt-dev/ctlptl@v0.8.22
+- name: kubernetes/kubectl@v1.28.1
+- name: kubernetes-sigs/kubebuilder@v3.12.0
+- name: kubernetes-sigs/kind@v0.20.0
+- name: stern/stern@v1.26.0
